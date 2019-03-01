@@ -15,10 +15,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./test_images/calibrate.png "Calibration"
-[image2]: ./test_images/undistort.png "Undistort"
-[image3]: ./test_images/combined_filter.png "Combined Filter Binary"
-[image4]: ./test_images/perspective.png "Unwarp"
+[image1]: ./output_images/calibrate.png "Calibration"
+[image2]: ./output_images/undistorted.png "Undistort"
+[image3]: ./output_images/combined_filter.png "Combined Filter Binary"
+[image4]: ./output_images/perspective.png "Unwarp"
 [image5]: ./test_images/test5.jpg "Original Pic"
 [image6]: ./test_images/test5_line.png "Detect Lane Lines"
 [image7]: ./test_images/prefinal.png "Final Output"
