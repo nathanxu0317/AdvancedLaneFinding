@@ -21,6 +21,7 @@ The goals / steps of this project are the following:
 [image4]: ./output_images/unwarped.png "Unwarp"
 [image8]: ./output_images/threshold.png "threshold"
 [image9]: ./output_images/curvefitting.png "curvefitting"
+[image10]: ./output_images/Equation.png "Equation"
 [image5]: ./test_images/test5.jpg "Original Pic"
 [image6]: ./test_images/test5_line.png "Detect Lane Lines"
 [image7]: ./test_images/prefinal.png "Final Output"
@@ -69,9 +70,21 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+I did this in `lines.py`. First, use histgram to find line start point, then use sliding window to locate the most possible line points. Then I curvefit the line points with a 2nd order polynomial. In the real application in video, if previous frame have good detection, next frame only need to find line points around fitting lines of previous frame.
 
 ![alt text][image9]
+
+#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+
+I did this in lines 123 through 141 in my code in `lines.py`,based on the following equation:
+![alt text][image10]
+I then scaled it from pixel space to real world space in meters. 
+
+#### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
+
+I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+
+
 
 #### 3. Combined threshold filter.
 
