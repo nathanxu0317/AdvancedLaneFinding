@@ -20,6 +20,7 @@ The goals / steps of this project are the following:
 [image3]: ./output_images/exampleimg.png "Combined Filter Binary"
 [image4]: ./output_images/unwarped.png "Unwarp"
 [image8]: ./output_images/threshold.png "threshold"
+[image9]: ./output_images/curvefitting.png "curvefitting"
 [image5]: ./test_images/test5.jpg "Original Pic"
 [image6]: ./test_images/test5_line.png "Detect Lane Lines"
 [image7]: ./test_images/prefinal.png "Final Output"
@@ -51,7 +52,7 @@ I used a combination of color and gradient thresholds to generate a binary image
 
 ![alt text][image8]
 
-#### 2. Perform a perspective transform in pipeline.
+#### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
 The code for my perspective transform includes a function called `unwarp()`, which is in the file `unwarp.py` The `unwarp()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  The `src` and destination `dst` is chosen mannually using the pic straight_line1.png
 
@@ -65,6 +66,12 @@ The code for my perspective transform includes a function called `unwarp()`, whi
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
 ![alt text][image4]
+
+#### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+
+Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+
+![alt text][image9]
 
 #### 3. Combined threshold filter.
 
