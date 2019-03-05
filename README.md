@@ -91,6 +91,19 @@ I implemented this step in `CODE.ipynb` in the function `process_image()`.  Here
 
 ![alt text][image11]
 
+---
+
+### Pipeline (video)
+
+#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+
+Here's a [link to my video result](./project_video_output.mp4)
+
+---
+
+
+
+
 #### 3. Combined threshold filter.
 
 Only color thresholds are used in this project, RGB R-channel, HLS L-channel and S-channel are combined together to get useful info, this part is in 'color.py'.
