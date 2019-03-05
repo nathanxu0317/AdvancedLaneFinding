@@ -22,6 +22,8 @@ The goals / steps of this project are the following:
 [image8]: ./output_images/threshold.png "threshold"
 [image9]: ./output_images/curvefitting.png "curvefitting"
 [image10]: ./output_images/Equation.png "Equation"
+[image11]: ./output_images/Example.png "Example"
+
 [image5]: ./test_images/test5.jpg "Original Pic"
 [image6]: ./test_images/test5_line.png "Detect Lane Lines"
 [image7]: ./test_images/prefinal.png "Final Output"
@@ -77,14 +79,17 @@ I did this in `lines.py`. First, use histgram to find line start point, then use
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I did this in lines 123 through 141 in my code in `lines.py`,based on the following equation:
+
 ![alt text][image10]
+
 I then scaled it from pixel space to real world space in meters. 
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+The fitted 2nd order polynomial line should be transfer back from bird view to normal view. Then they can be plotted on top of the original picture as following.
+I implemented this step in `CODE.ipynb` in the function `process_image()`.  Here is an example of my result on a test image:
 
-
+![alt text][image11]
 
 #### 3. Combined threshold filter.
 
