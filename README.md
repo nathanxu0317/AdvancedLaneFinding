@@ -51,7 +51,7 @@ To demonstrate this step, the following images are original test image and undis
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image. Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in another_file.py). Here's an example of my output for this step. (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines 12 through 42 in `lines.py`). Here's an example of my output for this step. 
 
 ![alt text][image8]
 
@@ -105,7 +105,11 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-1. In order to have more stable results especially the curve radius calcuation, robust fitted lines of previous frame should be stored, then averaged to get more smooth and reasonable result.
+1. The code would fail when the lane marks are partially or fully covered with snow or other objects. 
 
-2. Combined threshold should be fine tuned to get more useful data. The gradient should be used to improve output in certain condition.
+2. In order to have more stable results especially the curve radius calcuation, robust fitted lines of previous frame should be stored, then averaged to get more smooth and reasonable result.
+
+3. Combined threshold should be fine tuned to get more useful data. The gradient should be used to improve output in certain condition.
+
+
 
