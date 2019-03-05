@@ -101,51 +101,6 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 ---
 
-
-
-
-#### 3. Combined threshold filter.
-
-Only color thresholds are used in this project, RGB R-channel, HLS L-channel and S-channel are combined together to get useful info, this part is in 'color.py'.
-
-Here are the validation output for this step.
-
-![alt text][image3]
-
-#### 4. Lane lines detection and 2nd order polynomial curve fitting.
-
-First, use histgram to find line start point, then use sliding window to locate the most possible line points.
-Then I curvefit the line points with a 2nd order polynomial. In the real application in video, if previous frame have good detection, next frame only need to find line points around fitting lines of previous frame.
-
-![alt text][image5]
-![alt text][image6]
-
-#### 5. Curve radius and the position of the vehicle with respect to center.
-![alt text][image8]
-The curve radius is calculated using the above equation, pls note the pixl data should be change back to real distance data first.
-Then I did curve fitting again, and then calculate the curve radius based on new fitted 2nd order polynomial.
-
-For the relative position, I assuming the center of the image is vehicle position, the road position is (right line + left line)/2.
-
-The code for step 4 and 5 are located in lines.py
-
-#### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
-
-Finally, the fitted 2nd order polynomial line should be transfer back from bird view to normal view. Then they can be plotted on top of the original picture as following.
-
-![alt text][image7]
-
-
----
-
-### Pipeline (video)
-
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
-
-Here's a [link to my video result](./videos/project_video_output.mp4)
-
----
-
 ### Discussion
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
